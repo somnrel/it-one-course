@@ -2,6 +2,7 @@ package org.example.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -16,9 +17,8 @@ public class SelenideLoginPage {
     }
 
     public void login(String username, String password) {
-        usernameInput.setValue(username);
-        passwordInput.setValue(password);
-
-        loginButton.click();
+        usernameInput.shouldBe(visible).setValue(username);
+        passwordInput.shouldBe(visible).setValue(password);
+        loginButton.shouldBe(visible).click();
     }
 }
