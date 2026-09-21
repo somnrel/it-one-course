@@ -26,6 +26,14 @@ public class TestConfig {
         return new Credentials(getRequired("test.username"), getRequired("test.password"));
     }
 
+    public static String baseUrl() {
+        return getRequired("base.url");
+    }
+
+    public static String inventoryUrl() {
+        return baseUrl() + "inventory.html";
+    }
+
     private static String getRequired(String key) {
         String value = properties.getProperty(key);
 

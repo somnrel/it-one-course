@@ -2,7 +2,7 @@ package steps;
 
 import config.Credentials;
 import config.TestConfig;
-import org.example.pages.LoginPage;
+import pages.LoginPage;
 
 public class LoginSteps {
 

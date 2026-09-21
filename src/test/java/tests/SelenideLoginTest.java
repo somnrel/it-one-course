@@ -1,5 +1,6 @@
 package tests;
 
+import config.TestConfig;
 import steps.SelenideLoginSteps;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +14,6 @@ public class SelenideLoginTest {
     @Test
     void userShouldBeAbleToLogin() {
         loginSteps.loginAsTestUser();
-
-        webdriver().shouldHave(url("https://www.saucedemo.com/inventory.html"));
+        webdriver().shouldHave(url(TestConfig.inventoryUrl()));
     }
 }
