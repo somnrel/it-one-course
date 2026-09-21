@@ -43,4 +43,9 @@ public class TestConfig {
 
         return value;
     }
+
+    public static String dataTablesHerokuappUrl() {
+        return getRequired("data.tables.herokuapp.url");
+    }
+
 }
