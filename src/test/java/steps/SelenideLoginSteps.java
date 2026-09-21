@@ -2,7 +2,7 @@ package steps;
 
 import config.Credentials;
 import config.TestConfig;
-import org.example.pages.SelenideLoginPage;
+import pages.SelenideLoginPage;
 
 public class SelenideLoginSteps {
 
@@ -13,9 +13,8 @@ public class SelenideLoginSteps {
 
         loginPage.openLoginPage();
 
-        loginPage.login(
-                credentials.username(),
-                credentials.password()
-        );
+        loginPage.enterUsername(credentials.username());
+        loginPage.enterPassword(credentials.password());
+        loginPage.clickLogin();
     }
 }

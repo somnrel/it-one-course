@@ -1,10 +1,11 @@
 package tests;
 
+import base.BaseTest;
+import config.TestConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import pages.LoginPage;
 import steps.LoginSteps;
-import base.BaseTest;
-import org.example.pages.LoginPage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,6 +23,6 @@ public class LoginTest extends BaseTest {
 
         loginSteps.loginAsTestUser();
 
-        assertEquals("https://www.saucedemo.com/inventory.html", driver.getCurrentUrl());
+        assertEquals(TestConfig.inventoryUrl(), driver.getCurrentUrl());
     }
 }

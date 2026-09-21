@@ -1,5 +1,6 @@
-package org.example.pages;
+package pages;
 
+import config.TestConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,7 +23,7 @@ public class LoginPage {
     }
 
     public void open() {
-        driver.get("https://www.saucedemo.com/");
+        driver.get(TestConfig.baseUrl());
         wait.until(ExpectedConditions.visibilityOfElementLocated(usernameInput));
     }
 
