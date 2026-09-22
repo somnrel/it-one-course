@@ -48,4 +48,7 @@ public class TestConfig {
         return getRequired("data.tables.herokuapp.url");
     }
 
+    public static String dynamicLoadingUrl() {
+        return getRequired("dynamic.loading.url");
+    }
 }
