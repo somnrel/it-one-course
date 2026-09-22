@@ -4,7 +4,7 @@ import steps.SelenideLoginSteps;
 import steps.SelenideShopSteps;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SelenideShopTest {
 
@@ -19,6 +19,6 @@ public class SelenideShopTest {
         shopSteps.addItemsToCart();
         shopSteps.openCart();
         shopSteps.completeCheckout("Mikhail", "Koinov", "666666");
-        shopSteps.checkoutPage().getCompleteHeader().shouldHave(text("Thank you for your order!"));
+        assertEquals("Thank you for your order!", shopSteps.checkoutPage().getCompleteHeader().getText());
     }
 }
