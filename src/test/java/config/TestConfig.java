@@ -51,4 +51,8 @@ public class TestConfig {
     public static String dynamicLoadingUrl() {
         return getRequired("dynamic.loading.url");
     }
+
+    public static String loginUrl() {
+        return getRequired("login.url");
+    }
 }
